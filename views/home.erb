@@ -1,0 +1,8 @@
+<div>There are <%= Recipebook.count %> recipes in your recipebook</div>
+
+<ul>
+
+    <% @recipes.each do |recipe| %>
+    <li>
+        <%= recipe.name %>
+    </li>
