@@ -1,0 +1,19 @@
+
+.form {
+    display:  grid;
+    grid-template-columns: 1fr 1fr;
+    background-color: aqua;
+    
+}
+.form_option {
+    font-size:2vw;
+}
+.form_label {
+
+}
+.span_2 {
+    grid-column: span 2;
+}
+.center {
+    text-align:  center;
+}

@@ -52,6 +52,8 @@ recipe.instructions = params[:instructions]
         recipe.meat = false
         recipe.parve = true
     end
+    recipe.save
+    redirect to("/home")
 end
 
 post "/edit_recipe/:id" do
