@@ -9,6 +9,15 @@
     column-gap: 5px;
 }
 
+.grid-header {
+    background-color: #83c5be;
+    color: #006d77;
+    font-size: larger;
+    font-weight: bolder;
+    padding: 10px;
+    align-self: center;
+}
+
 .grid-item {
     background-color: #ffcdb2;
     color: #6d6875;

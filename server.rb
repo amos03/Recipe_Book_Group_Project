@@ -25,14 +25,12 @@ get "/edit_form/:id" do
     erb :edit_form
 end
 
-
-
 post "/add_recipe" do
     recipe = Recipebook.new
-recipe.name = params[:name]
-recipe.prep_time = params[:prep_time]
-recipe.ingredients = params[:ingredients]
-recipe.instructions = params[:instructions]
+    recipe.name = params[:name]
+    recipe.prep_time = params[:prep_time]
+    recipe.ingredients = params[:ingredients]
+    recipe.instructions = params[:instructions]
 
     if params[:meat] && params[:milk]
         recipe.name += " (not kosher)"
@@ -52,36 +50,41 @@ recipe.instructions = params[:instructions]
         recipe.meat = false
         recipe.parve = true
     end
+
+    recipe.save
+    redirect to("/home")
 end
 
 post "/edit_recipe/:id" do
     recipe = Recipebook.find(params[:id])
-recipe.name = params[:name]
-recipe.prep_time = params[:prep_time]
-recipe.ingredients = params[:ingredients]
-recipe.instructions = params[:instructions]
+    recipe.name = params[:name]
+    recipe.prep_time = params[:prep_time]
+    recipe.ingredients = params[:ingredients]
+    recipe.instructions = params[:instructions]
+    
     if recipe.name.include? "(not kosher)"
-recipe.name = recipe.name.delete_suffix(" (not kosher)")
+        recipe.name = recipe.name.delete_suffix(" (not kosher)")
     end
-        if params[:meat] && params[:milk]
+        
+    if params[:meat] && params[:milk]
             recipe.name += " (not kosher)"
             recipe.dairy = true
             recipe.meat = true
             recipe.parve = false
-        elsif params[:meat]
+    elsif params[:meat]
             recipe.dairy = false
             recipe.meat = true
             recipe.parve = false
-        elsif params[:milk]
+    elsif params[:milk]
             recipe.dairy = true
             recipe.meat = false
             recipe.parve = false
-        else
+    else
             recipe.dairy = false
             recipe.meat = false
             recipe.parve = true
-        end
+    end
 
-recipe.save
-redirect to("/home")
+    recipe.save
+    redirect to("/home")
 end
