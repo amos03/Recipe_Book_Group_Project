@@ -14,6 +14,8 @@
     color: #006d77;
     font-size: larger;
     font-weight: bolder;
+    padding: 10px;
+    align-self: center;
 }
 
 .grid-item {
