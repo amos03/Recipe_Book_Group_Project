@@ -1,11 +1,13 @@
 <div>There are <%= Recipebook.count %> recipes in your recipe book</div>
 
-<ul>
+
+<div class="grid-container_recipes">
 
     <% @recipes.each do |recipe| %>
 
-    <li>
+    <div class="grid-item">
         <%= recipe.name %>
+
         <a href=<%="/edit_form/#{recipe.id}"%>>Edit</a>
     </li>
 <% end %>
@@ -15,3 +17,28 @@
 <a class="submit_btn_text" href="/add_recipe_form">Add a new recipe</a>
 </div>
 
+</div>
+
+    <div class="grid-item>
+        <%= recipe.prep_time %>
+    </div>
+<% end %> -->
+
+    <!-- <div class="grid-item item_recipe_name">
+        Key Lime Pie
+    </div>
+
+    <div class="grid-item">
+        30 minutes
+    </div>
+
+    <div class="grid-item item_recipe_name">
+        Fruit pie
+    </div>
+
+    <div class="grid-item">
+        20 minutes
+    </div> -->
+
+
+</div>
