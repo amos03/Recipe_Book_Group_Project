@@ -1,12 +1,12 @@
-<div>There are <%= Recipebook.count %> recipes in your recipebook</div>
+<div>There are <%= Recipebook.count %> recipes in your recipe book</div>
 
 <ul>
 
     <% @recipes.each do |recipe| %>
-        <li>
-            <%= recipe.name %>
-        </li>
 
+    <li>
+        <%= recipe.name %>
+    </li>
+<% end %>
 </ul>
 
-<!-- testing branch  -->
