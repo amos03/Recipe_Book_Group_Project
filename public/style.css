@@ -1,6 +1,41 @@
 * {
     font-family: Verdana, Geneva, Tahoma, sans-serif;
 }
+
+input[type=checkbox] {
+    width: 2vw;
+    height: 2vw;
+}
+
+.big_input {
+    width: 80%;
+    height: 2vw;
+    }
+
+.small_input{
+    width: 20%;
+    height: 2vw;
+}
+
+.form {
+    display:  grid;
+    grid-template-columns: 1fr 1fr;
+    background-color: #ffcdb2;
+    
+}
+
+.form_option {
+    font-size:2vw;
+    padding: 1rem;
+}
+
+.span_2 {
+    grid-column: span 2;
+}
+.center {
+    text-align:  center;
+}
+
 .grid-container_recipes {
     display: grid;
     grid-template-columns: 1fr 1fr;

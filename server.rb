@@ -50,7 +50,7 @@ post "/add_recipe" do
         recipe.meat = false
         recipe.parve = true
     end
-
+    
     recipe.save
     redirect to("/home")
 end
