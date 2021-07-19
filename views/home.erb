@@ -3,44 +3,23 @@
 
 <div class="grid-container_recipes">
 
+    <div class = "grid-header">Recipe Name</div>
+
+    <div class = "grid-header">Preparation Time (minutes)</div>
+    
     <% @recipes.each do |recipe| %>
 
-    <div class="grid-item">
+    <div class="grid-item item_recipe_name">
         <%= recipe.name %>
-<<<<<<< HEAD
     </div>
 
-    <div class="grid-item>
+    <div class="grid-item">
         <%= recipe.prep_time %>
     </div>
-<% end %> -->
-
-    <!-- <div class="grid-item item_recipe_name">
-        Key Lime Pie
-    </div>
-
-    <div class="grid-item">
-        30 minutes
-    </div>
-
-    <div class="grid-item item_recipe_name">
-        Fruit pie
-    </div>
-
-    <div class="grid-item">
-        20 minutes
-    </div> -->
-
+<% end %>
 
 </div>
-=======
-        <a href=<%="/edit_form/#{recipe.id}"%>>Edit</a>
-    </li>
-<% end %>
-</ul>
 
 <div class="submit_btn">
-<a class="submit_btn_text" href="/add_recipe_form">Add a new recipe</a>
-</div>
-
->>>>>>> main
+    <a class="submit_btn_text" href="/add_recipe_form">Add a new recipe</a>
+    </div>

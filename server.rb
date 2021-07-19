@@ -33,6 +33,7 @@ recipe.name = params[:name]
 recipe.prep_time = params[:prep_time]
 recipe.ingredients = params[:ingredients]
 recipe.instructions = params[:instructions]
+recipe.save
 
     if params[:meat] && params[:milk]
         recipe.name += " (not kosher)"
@@ -52,6 +53,7 @@ recipe.instructions = params[:instructions]
         recipe.meat = false
         recipe.parve = true
     end
+    redirect to("/home")
 end
 
 post "/edit_recipe/:id" do
