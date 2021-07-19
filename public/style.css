@@ -1,0 +1,22 @@
+* {
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+.grid-container_recipes {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-auto-rows: minmax(50px, auto);
+    row-gap: 2px;
+    column-gap: 5px;
+}
+
+.grid-item {
+    background-color: #ffcdb2;
+    color: #6d6875;
+    padding: 10px;
+    align-self: center;
+    
+}
+
+.item_recipe_name {
+    font-weight: bold;
+}
