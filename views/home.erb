@@ -1,13 +1,25 @@
 <div>There are <%= Recipebook.count %> recipes in your recipe book</div>
 
-<!-- Display name of recipe and parve/dairy/meat -->
-<ul>
 
-    <% @recipes.each do |recipe| %>
+<div class="grid-container_recipes">
 
-    <li>
+    <!-- <% @recipes.each do |recipe| %>
+
+    <div class="grid-item">
         <%= recipe.name %>
-    </li>
-<% end %>
-</ul>
+    </div>
 
+    <div class="grid-item>
+        <%= recipe.prep_time %>
+    </div>
+<% end %> -->
+
+    <div class="grid-item">
+        Key Lime Pie
+    </div>
+
+    <div class="grid-item">
+        30 minutes
+    </div>
+
+</div>
