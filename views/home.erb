@@ -6,7 +6,12 @@
 
     <li>
         <%= recipe.name %>
+        <a href=<%="/edit_form/#{recipe.id}"%>>Edit</a>
     </li>
 <% end %>
 </ul>
+
+<div class="submit_btn">
+<a class="submit_btn_text" href="/add_recipe_form">Add a new recipe</a>
+</div>
 
